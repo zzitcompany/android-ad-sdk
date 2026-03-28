@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Android Ad SDK Demo"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingVertical="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="支持的广告类型："
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingVertical="8dp" />
+
+        <Button
+            android:id="@+id/btn_show_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="展示横幅广告 (Banner)" />
+
+        <Button
+            android:id="@+id/btn_show_feed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="展示信息流广告 (Feed)"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/btn_show_interstitial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="展示插屏广告 (Interstitial)"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/btn_show_rewarded"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="展示激励视频 (Rewarded Video)"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/btn_preload_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="预加载所有广告"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#FF6200" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="横幅广告容器："
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:paddingTop="24dp"
+            android:paddingBottom="8dp" />
+
+        <FrameLayout
+            android:id="@+id/banner_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F0F0F0"
+            android:minHeight="100dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="信息流广告容器："
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp" />
+
+        <FrameLayout
+            android:id="@+id/feed_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F0F0F0"
+            android:minHeight="200dp" />
+
+    </LinearLayout>
+
+</ScrollView>
