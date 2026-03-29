@@ -41,7 +41,7 @@ public class AdCacheManager {
         if (instance == null) {
             synchronized (AdCacheManager.class) {
                 if (instance == null) {
-                    instance = new AdCacheManager(AdSdkConfig.Builder::new);
+                    instance = new AdCacheManager(new AdSdkConfig.Builder().build());
                 }
             }
         }
