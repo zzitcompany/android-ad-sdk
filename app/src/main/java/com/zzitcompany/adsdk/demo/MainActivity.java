@@ -106,25 +106,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void showSplashAd() {
         if (splashAdLoader.isAdLoaded()) {
-            splashAdLoader.showAd(this, splashContainer);
+            splashAdLoader.showAd(this);
         } else {
             // 重新加载并显示
             splashAdLoader.setAdListener(new AdListener() {
                 @Override
                 public void onAdLoaded(AdData adData) {
-                    splashAdLoader.showAd(MainActivity.this, splashContainer);
+                    splashAdLoader.showAd(MainActivity.this);
                 }
                 
                 @Override
                 public void onAdLoadFailed(int errorCode, String errorMsg) {
                     Toast.makeText(MainActivity.this, "开屏广告加载失败: " + errorMsg, Toast.LENGTH_SHORT).show();
-                }
-                
-                @Override
-                public void onAdClosed() {
-                    if (splashContainer != null) {
-                        splashContainer.removeAllViews();
-                    }
                 }
             });
             splashAdLoader.loadAd();
