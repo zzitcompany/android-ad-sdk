@@ -64,6 +64,13 @@ public class SplashAdLoader extends BaseAdLoader {
                     adListener.onAdLoaded(adData);
                 }
             }
+
+            @Override
+            public void onAdLoadFailed(int errorCode, String errorMsg) {
+                if (adListener != null) {
+                    adListener.onAdLoadFailed(errorCode, errorMsg);
+                }
+            }
             
             @Override
             public void onAdImpression() {
