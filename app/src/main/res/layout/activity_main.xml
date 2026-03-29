@@ -30,10 +30,17 @@
             android:paddingVertical="8dp" />
 
         <Button
+            android:id="@+id/btn_show_splash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="展示开屏广告 (Splash)" />
+
+        <Button
             android:id="@+id/btn_show_banner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="展示横幅广告 (Banner)" />
+            android:text="展示横幅广告 (Banner)"
+            android:layout_marginTop="8dp" />
 
         <Button
             android:id="@+id/btn_show_feed"
@@ -64,13 +71,29 @@
             android:layout_marginTop="16dp"
             android:backgroundTint="#FF6200" />
 
+        <!-- 开屏广告容器 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="开屏广告容器："
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:paddingTop="24dp"
+            android:paddingBottom="8dp" />
+
+        <FrameLayout
+            android:id="@+id/splash_container"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#F0F0F0" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="横幅广告容器："
             android:textSize="14sp"
             android:textStyle="bold"
-            android:paddingTop="24dp"
+            android:paddingTop="16dp"
             android:paddingBottom="8dp" />
 
         <FrameLayout
