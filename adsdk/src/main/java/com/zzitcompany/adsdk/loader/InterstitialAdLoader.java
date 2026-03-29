@@ -5,6 +5,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -15,6 +16,7 @@ import com.bumptech.glide.Glide;
 import com.zzitcompany.adsdk.config.AdSdkConfig;
 import com.zzitcompany.adsdk.listener.AdListener;
 import com.zzitcompany.adsdk.model.AdType;
+import com.zzitcompany.adsdk.utils.AdFrequencyManager;
 import com.zzitcompany.adsdk.view.CloseButton;
 
 /**

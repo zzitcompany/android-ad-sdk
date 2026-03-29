@@ -1,9 +1,11 @@
 package com.zzitcompany.adsdk.loader;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.ViewGroup;
 
 import com.zzitcompany.adsdk.config.AdSdkConfig;
+import com.zzitcompany.adsdk.listener.AdListener;
 import com.zzitcompany.adsdk.model.AdType;
 import com.zzitcompany.adsdk.view.BannerAdView;
 

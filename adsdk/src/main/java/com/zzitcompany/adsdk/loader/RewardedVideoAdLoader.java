@@ -6,6 +6,7 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -15,6 +16,7 @@ import android.widget.VideoView;
 import com.zzitcompany.adsdk.config.AdSdkConfig;
 import com.zzitcompany.adsdk.listener.RewardedAdListener;
 import com.zzitcompany.adsdk.model.AdType;
+import com.zzitcompany.adsdk.utils.AdFrequencyManager;
 import com.zzitcompany.adsdk.view.CloseButton;
 
 /**
@@ -95,7 +97,7 @@ public class RewardedVideoAdLoader extends BaseAdLoader {
         
         videoView.setOnErrorListener((mp, what, extra) -> {
             Log.e(TAG, "Video playback error: " + what);
-            notifyAdLoadFailed(-1, "Video playback error");
+            onAdLoadFailedInternal(-1, "Video playback error");
             dismissAd();
             return true;
         });
